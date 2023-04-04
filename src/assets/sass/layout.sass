@@ -1,0 +1,140 @@
+.wrap
+	width: 1920px
+	margin: 0 auto
+
+header
+	background-color: $purple
+	border-bottom-left-radius: 30px
+	border-bottom-right-radius: 30px
+	height: 146px
+	position: relative
+	&:before
+		content: ''
+		width: 30px
+		height: 30px
+		position: absolute
+		bottom: 0
+		left: 0
+		background-color: $dp
+		z-index: -1
+	&:after
+		content: ''
+		width: 30px
+		height: 30px
+		position: absolute
+		bottom: 0
+		right: 0
+		background-color: $dp
+		z-index: -1
+	.wrapper
+		width: 1680px
+		margin: 0 auto
+	a
+		color: #fff
+		text-decoration: none
+	.row
+		display: flex
+		justify-content: space-between
+		&:nth-of-type(1)
+			position: relative
+			align-items: center
+			&:after
+				content: url(/assets/img/icons/line.svg)
+				position: absolute
+				bottom: 0
+				right: 0
+			ul
+				display: flex
+				margin-right: 235px
+				li
+					display: flex
+					&:last-of-type
+						margin-left: 3rem
+					img
+						margin-right: 10px
+					a
+						font-weight: 600
+						&:hover
+							text-decoration: underline
+		&:nth-of-type(2)
+			ul.nav
+				display: flex
+				width: 100%
+				gap: 40px
+				align-items: center
+				li.parent
+					position: relative
+					>a:after
+						content: url(/assets/img/icons/tri.svg)
+						display: inline-block
+						position: absolute
+						margin-left: 5px
+					&.right
+						>a:after
+							transform: rotate(-90deg)
+					&.left
+						>a:after
+							transform: rotate(90deg)
+					ul.inner
+						min-width: 250px	
+				>li
+					padding: 20px 0
+					&.under a
+						text-decoration: underline
+					&.parent
+						ul.inner
+							display: none
+							li
+								margin-bottom: 1rem
+								&:last-of-type
+									margin-bottom: 0
+								a:hover
+									text-decoration: underline
+								&.parent:hover
+									>a
+										font-weight: 600
+									&.right
+										ul.inner
+											left: 250px
+											top: 0
+											background-color: $purple
+											padding: 1rem
+											border-bottom-right-radius: 20px
+									&.left
+										ul.inner
+											left: -250px
+											top: 0
+											background-color: $purple	
+											padding: 1rem
+											border-bottom-left-radius: 20px
+									ul.inner
+										display: block
+										position: absolute
+
+						&:hover, &.active
+							> ul.inner
+								display: block
+							.dd.section
+								display: flex
+								>ul.inner
+									display: block	
+						.dd
+							display: none	
+							background-color: $purple
+							position: absolute
+							top: 58px
+							padding: 1rem
+							padding-right: 0
+							font-size: 0.9rem
+							border-right: none
+							border: 1px solid rgba(0,0,0,.15)
+							border-image-slice: 32 27 27 27
+							border-image-width: 20px 20px 20px 20px
+							border-image-outset: 0px 0px 0px 0px
+							border-image-repeat: stretch stretch
+							border-image-source: url(/assets/img/icons/border-sub-menu.png)
+							border-top: 0
+							border-radius: 0 0 0 30px
+
+
+							
