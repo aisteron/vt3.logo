@@ -2,9 +2,8 @@
 	width: 1920px
 	margin: 0 auto
 .wrapper
-	width: 1680px
+	width: 1790px
 	margin: 0 auto
-
 header
 	background-color: $purple
 	border-bottom-left-radius: 30px
@@ -77,7 +76,7 @@ header
 						>a:after
 							transform: rotate(90deg)
 					ul.inner
-						min-width: 250px	
+						min-width: 250px
 				>li
 					padding: 20px 0
 					&.under a
@@ -105,7 +104,7 @@ header
 										ul.inner
 											left: -250px
 											top: 0
-											background-color: $purple	
+											background-color: $purple
 											padding: 1rem
 											border-bottom-left-radius: 20px
 									ul.inner
@@ -118,9 +117,9 @@ header
 							.dd.section
 								display: flex
 								>ul.inner
-									display: block	
+									display: block
 						.dd
-							display: none	
+							display: none
 							background-color: $purple
 							position: absolute
 							top: 58px
@@ -140,7 +139,7 @@ header
 	color: #fff
 	background-color: $dp
 	.swiper
-		width: 88vw
+		width: 92vw
 	.swiper-wrapper
 		.swiper-slide
 			margin: 0 auto
@@ -178,8 +177,11 @@ header
 .cases
 	background-color: #28062C
 	.wrapper
-		width: 1800px
+		//width: 1800px
 		margin: 0 auto
+		padding-top: 100px
+		padding-bottom: 100px
+
 	h2
 		font-size: 70px
 		color: $yellow
@@ -190,12 +192,21 @@ header
 		text-transform: uppercase
 		color: #fff
 		margin: 0
+		font-weight: normal
+		margin: 2rem 0
+		&+p
+			margin-top: 0
 	p
 		color: #fff
 		font-size: 30px
+	button.yellow
+		padding: 20px 60px
+		margin: 0 auto
+		display: block
 	section
 		display: flex
 		justify-content: space-between
+		margin-bottom: 3rem
 		#masonry
 			flex-grow: 1
 			display: grid
@@ -205,6 +216,14 @@ header
 				figure
 					margin: 0
 					position: relative
+					transition: all 0.3s ease
+					&:hover
+						figcaption
+							//display: block
+							opacity: 1
+						&:after
+							//display: block	
+							opacity: 1
 					img
 						height: 100%
 					&::after
@@ -216,8 +235,12 @@ header
 						position: absolute
 						bottom: 0
 						right: 0
+						//display: none
+						opacity: 0
+						transition: all 0.3s ease
 				figcaption
 					//display: none
+					opacity: 0
 					position: absolute
 					top: 50%
 					right: 1rem
@@ -225,10 +248,11 @@ header
 					z-index: 2
 					font-weight: bold
 					color: #111
+
 				&:nth-of-type(1)
 					grid-column: 1
 					grid-row: 1
-					height: 577px
+					//height: 577px
 
 					display: grid
 					grid-gap: 30px
@@ -263,7 +287,7 @@ header
 				&:nth-of-type(3)
 					grid-column: 2
 					grid-row: 1/3
-					
+
 					display: grid
 					grid-template-columns: 274px 274px
 					grid-gap: 30px
@@ -284,12 +308,483 @@ header
 							grid-column: 2
 							grid-row: 3
 		.float
-			span
-				color: #fff
-				display: block
-				font-weight: 800
-				text-transform: uppercase
-				&.yellow
+			.inner
+				position: sticky
+				top: 0
+				&>p
+					margin-top: -7px
+				span
+					color: #fff
+					display: block
+					font-weight: 800
+					text-transform: uppercase
+					&.yellow
+						color: $yellow
+					&.h1
+						font-size: 66px
+.testimonials
+	background-color: #340738
+	color: #fff
+	.wrapper
+		//width: 1790px
+		margin: 0 auto
+		padding: 100px 0
+		position: relative
+		>h2
+			font-size: 70px
+			color: $yellow
+			margin: 0
+			text-transform: uppercase
+		>h3
+			font-size: 56px
+			font-weight: normal
+			margin: 0
+		>.dsc
+			width: 50%
+			p
+				font-size: 24px
+				b
 					color: $yellow
-				&.h1
-					font-size: 66px
+		.arrows
+			position: absolute
+			top: 2rem
+			right: 2rem
+			.test-prev, .test-next
+				cursor: pointer
+				transition: opacity 0.3s ease
+				&.swiper-button-disabled
+					cursor: not-allowed
+				&:hover
+					opacity: 0.7
+
+		.test-swiper
+			margin-top: 3rem
+			.swiper-slide
+				width: 426px
+				.header
+					display: flex
+					align-items: center
+					img.userpic
+						border-radius: 50%
+						border: 3px solid #340738
+						outline: 3px solid #583E7A
+						margin-right: 1rem
+					.dsc
+						span
+							display: block
+							font-weight: 600
+							&.name
+								color: $yellow
+								margin-bottom: 10px
+							&.role
+								//max-width: 250px
+				.txt
+					background-color: $purple
+					font-size: 14px
+					line-height: 22px
+					padding: 30px
+					border-radius: 10px
+					position: relative
+					margin-top: 39px
+					margin-bottom: 1rem
+					&:before
+						content: url('/assets/img/icons/pol3.svg')
+						position: absolute
+						top: -26px
+						left: 33px
+				.video
+					position: relative
+					img
+						&.play
+							position: absolute
+							top: calc(50% - 50px)
+							left: calc(50% - 50px)
+							cursor: pointer
+							&:hover
+								filter: invert(75%) sepia(35%) saturate(928%) hue-rotate(358deg) brightness(98%) contrast(94%)
+.how_much
+	background-color: $purple
+	.wrapper
+		padding: 100px 0
+		.header
+			border-left: 4px solid $yellow
+			padding-left: 30px
+			h2
+				font-size: 70px
+				color: $yellow
+				text-transform: uppercase
+				margin: 0
+				margin-bottom: 2rem
+			h3
+				font-size: 50px
+				color: #fff
+				margin: 0
+				text-transform: uppercase
+
+		section
+			display: flex
+			justify-content: space-between
+			margin-top: 50px
+			.block
+				width: 577px
+				background-color: #fff
+				border: 3px solid $yellow
+				p.type
+					text-align: center
+					font-weight: bold
+					font-size: 36px
+					margin: 4rem 0
+				ul
+					width: 85%
+					margin: 2rem auto
+					list-style: circle
+					font-size: 24px
+					li
+						line-height: 150%
+				.price
+					background-color: #340738
+					border-top: 3px solid $yellow
+					border-bottom: 3px solid $yellow
+					text-align: center
+					span
+						color: #fff
+						font-size: 36px
+						margin: 1rem 0
+						display: inline-block
+						span
+							color: $yellow
+							font-size: 24px
+				button.yellow
+					border: none
+					margin: 1rem auto
+					display: block
+.term
+	background-color: #340738
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 100px 0
+	.header
+		max-width: 480px
+		h2
+			font-size: 70px
+			color: $yellow
+			text-transform: uppercase
+			margin-bottom: 1rem
+		p
+			font-size: 24px
+			color: #fff
+	figure
+		text-align: center
+		figcaption
+			position: absolute
+			font-size: 64px
+			color: #fff
+			margin-top: -260px
+			margin-left: 64px
+			font-weight: 600
+.employees
+	background-color: #5B1362
+	.wrapper
+		padding: 100px 0
+		h2
+			font-size: 70px
+			margin: 0
+			color: $yellow
+			text-transform: uppercase
+			text-align: center
+		section
+			display: flex
+			gap: 30px
+			margin-top: 50px
+			.block
+				background-color: $purple
+				width: 577px
+				border: 3px solid $yellow
+				figure
+					margin: 0
+					position: relative
+					text-align: right
+					figcaption
+						color: #fff
+						position: absolute
+						font-size: 36px
+						font-weight: 600
+						bottom: 2rem
+						left: 2rem
+				.role
+					border-top: 3px solid $yellow
+					background-color: #340738
+					text-align: center
+					span
+						color: $yellow
+						padding: 1rem 0
+						display: inline-block
+						font-size: 36px
+						font-weight: 600
+.process
+	background-color: $purple
+	.wrapper
+		//padding: 100px 0
+		display: flex
+		align-items: center
+		h2
+			font-size: 70px
+			color: $yellow
+			margin: 0
+			text-transform: uppercase
+
+		.dsc
+			width: 743px
+			dd
+				margin: 0
+				padding: 0
+				p
+					color: #fff
+					font-size: 24px
+					&.yellow
+						font-weight: bold
+						font-size: 32px
+						color: $yellow
+			dt
+				font-weight: bold
+				font-size: 32px
+				color: #fff
+				font-weight: normal
+.certified
+	background-color: #56295A
+	.wrapper
+		text-align: center
+		padding-top: 100px
+	h2
+		font-size: 70px
+		text-transform: uppercase
+		margin: 0
+		color: #fff
+		span
+			color: $yellow
+			display: block
+	.logos
+		width: 580px
+		margin: 0 auto
+		margin-top: 55px
+		display: flex
+		justify-content: space-between
+		img
+			border-radius: 7px
+	.wave
+		background-color: #fff
+.clients
+	.wrapper
+		text-align: center
+		margin-top: -5rem
+		padding-bottom: 100px
+		h2
+			font-size: 70px
+			color: $yellow
+			text-transform: uppercase
+			margin: 0
+		.row
+			width: 1172px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin: 0 auto
+			&:first-of-type
+				margin-top: 50px
+				margin-bottom: 60px
+.more
+	background-color: #340738
+	padding: 100px 0
+	text-align: center
+	h2
+		font-size: 70px
+		color: $yellow
+		text-transform: uppercase
+		margin: 0
+	h3
+		font-weight: normal
+		font-size: 56px
+		margin: 0
+		color: #fff
+	dl
+		display: flex
+		justify-content: center
+		gap: 3rem
+		margin-top: 50px
+		.column
+			max-width: 370px
+		dt
+			color: $yellow
+			font-size: 32px
+			font-weight: 600
+			margin-bottom: 20px
+		dd
+			color: #fff
+			font-size: 24px
+.callback
+	background-color: $purple
+	display: flex
+	justify-content: center
+	gap: 30px
+	padding: 100px 0
+	.cta
+		width: 50%
+		color: #fff
+		span
+			display: block
+			font-weight: 600
+			text-transform: uppercase
+			&.h3
+				font-size: 50px
+			&.h2
+				font-size: 100px
+				color: $yellow
+		p.like
+			font-size: 36px
+			margin: 0
+			margin-top: 2rem
+			span
+				color: $yellow
+				display: inline
+		span.calc
+			font-size: 24px
+			text-transform: inherit
+	form
+		width: 630px
+		h3
+			color: #fff
+			font-size: 36px
+			margin-top: 0
+		>label
+			display: block
+			&:nth-of-type(2)
+				margin: 2rem 0
+			span
+				display: block
+				color: #fff
+				font-size: 14px
+				margin-bottom: 10px
+			input
+				width: 100%
+				height: 38px
+				border-radius: 50px
+				border: none
+				outline: none
+				padding-left: 1rem
+				font-size: 1rem
+			textarea
+				width: 100%
+				height: 84px
+				border-radius: 20px
+		.agree
+			margin-top: 1rem
+			span
+				display: inline
+			label
+				display: flex
+				align-items: center
+				margin-bottom: 1rem
+				input[type="checkbox"]
+					display: none
+					&:checked ~ .checkmark
+						&:after
+							content: url(/assets/img/icons/ok.svg)
+							position: absolute
+							top: 1px
+							left: 2px
+				.checkmark
+					border: 1px solid #fff
+					border-radius: 7px
+					width: 24px
+					height: 24px
+					display: inline-block
+					margin-right: 10px
+					position: relative
+					cursor: pointer
+					&:hover
+						background-color: #2f2154
+					&+span
+						color: #fff
+						a
+							color: #fff
+							text-decoration: underline
+							&:hover
+								text-decoration: none
+			input[type="submit"]
+				display: block
+				border-radius: 30px
+				background: linear-gradient(180deg, #F1CA2D 0%, #F7A21E 100%)
+				color: #000
+				padding: 20px 60px
+				font-size: 18px
+				cursor: pointer
+				outline: none
+				border: none
+				&:hover
+					background: linear-gradient(180deg,#f1ca2d,#be7a11)
+footer
+	background-color: #56295A
+	.wrapper
+		width: 1370px
+		display: flex
+		justify-content: space-between
+		color: #fff
+		font-size: 14px
+		.y
+			font-weight: 600
+			font-size: 18px
+			color: $yellow
+		a
+			color: #fff
+
+		.circle
+			background-color: #c4c4c4
+			border-radius: 50%
+			color: #56295A
+			display: inline-block
+			font-weight: bold
+			line-height: 24px
+			margin-right: 5px
+			text-align: center
+			width: 24px
+			font-size: 10px
+		.column
+			&.rek
+				max-width: 300px
+				p
+					line-height: 150%
+				ul
+					li
+						line-height: 150%
+				a
+					&:hover
+						text-decoration: none
+			&.cont
+				font-size: 1rem
+				ul
+					display: flex
+					gap: 10px
+					align-items: center
+					img
+						cursor: pointer
+						transition: opaciton 0.3s ease
+						&:hover
+							opacity: 0.4
+				.hidden
+					display: block
+					position: relative
+					&:after
+						content: '►'
+						position: absolute
+						top: 5px
+						right: 29px
+						font-size: 8px
+						display: block
+						transform: rotate(90deg)
+					&.opened
+						&:after
+							content: ''	
+					&:last-of-type
+						margin-bottom: 1rem
+						margin-top: 10px

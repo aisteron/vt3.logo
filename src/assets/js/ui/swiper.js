@@ -25,4 +25,15 @@ export const swiper = {
 			fadeEffect: { crossFade: true }
     });
 	},
+	init_test(el){
+		new Swiper(el, {
+			slidesPerView: 4,
+      spaceBetween: 30,
+			navigation: {
+        nextEl: ".test-next",
+        prevEl: ".test-prev",
+      }
+
+    });
+	}
 }
