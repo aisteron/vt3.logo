@@ -4,13 +4,22 @@ header
 			img.burger(src="/assets/img/icons/burger.svg" style="display: none")
 			a.logo(href="/")
 				img(src="/assets/img/logo.svg" width="342")
-			ul
+			ul.c
 				li 
 					img(src="/assets/img/icons/phone.svg")
 					a(href="tel:+375 (29) 257-70-07") +375 (29) 257-70-07
 				li
-					img(src="/assets/img/icons/envelope.svg") 	
+					img(src="/assets/img/icons/envelope.svg")
 					a(href="mailto:3577007by@gmail.com") 3577007by@gmail.com
+			.lang
+				.w
+					label RU
+					img.selected(src="/assets/img/icons/ru.svg")
+				ul
+					li(data-label="RU")
+						img.flag(src="/assets/img/icons/ru.svg")
+					li(data-label="BY")
+						img.flag(src="/assets/img/icons/by.svg")
 		.row
 			ul.nav
 				li.under

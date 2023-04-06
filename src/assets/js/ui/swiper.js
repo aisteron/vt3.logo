@@ -26,13 +26,27 @@ export const swiper = {
     });
 	},
 	init_test(el){
+		let pv = 4
+		innerWidth <= 1230 && (pv = 3) 
+		innerWidth <= 950 && (pv = 2) 
+		innerWidth <= 630 && (pv = 1) 
 		new Swiper(el, {
-			slidesPerView: 4,
+			slidesPerView: pv,
       spaceBetween: 30,
 			navigation: {
         nextEl: ".test-next",
         prevEl: ".test-prev",
       }
+
+    });
+	},
+	init_clients1(el){
+		let pv = 5
+		innerWidth <= 630 && (pv = 2) 
+		new Swiper(el, {
+			slidesPerView: pv,
+      spaceBetween: 30,
+			
 
     });
 	}

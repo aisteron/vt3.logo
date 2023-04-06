@@ -107,3 +107,8 @@ export async function load_toast(){
 		}
 	})
 }
+
+
+export function log(m){
+	console.log(`%c ${m}`, 'color: #6c0101')
+}
