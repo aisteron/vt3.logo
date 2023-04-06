@@ -37,8 +37,10 @@ export let yt = {
 		const observer = new IntersectionObserver((entries, observer) => {
 			(entries[0].isIntersecting && player) && player.playVideo()
 		}, { threshold: 0.5 })
-
+		
+		
 		observer.observe(qs('.process'))
+
 	}
 
 }

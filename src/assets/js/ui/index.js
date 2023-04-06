@@ -3,16 +3,16 @@ import { swiper } from "./swiper";
 import { yt } from "./player";
 export async function Ui(){
 
-	//masonry()
 
 	await swiper.load(qs('.header-swiper'))
 	&& (
 		swiper.init(qs('.header-swiper .swiper')),
 		swiper.init_test(qs('.swiper.test-swiper')),
-		swiper.init_clients1(qs('.swiper.clients-swiper1'))
+		swiper.init_clients(qs('.swiper.clients-swiper1'),1),
+		swiper.init_clients(qs('.swiper.clients-swiper2'),2)
 	)
-
-	await yt.load() && ( yt.init(), yt.observe() )	
+	process.env.NODE_ENV == 'production'
+	&& await yt.load() && ( yt.init(), yt.observe() )	
 
 
 	hidden_contacts_footer()

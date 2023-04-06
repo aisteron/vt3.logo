@@ -696,30 +696,46 @@ header
 		margin-top: -5rem
 		padding-bottom: 100px
 		h2
-			font-size: 70px
+			font-size: calc(2vw + 2vh + 2vmin)
 			color: $yellow
 			text-transform: uppercase
-			margin: 0
+			margin-top: 3rem
+			@media(max-width: 450px)
+				margin-top: 5rem
 		.swiper-wrapper
 			align-items: center	
-		.clients1
-			width: 90vw
+
+		div[class*="clients"]
 			position: relative
+			.swiper
+				width: 70vw
 			.arrows
 				position: absolute
-				top: -40px	
+				top: 17px
+				z-index: 2
+				width: 100%
+				display: flex
+				justify-content: space-between
+				img
+					transition: opacity 0.3s ease
+					cursor: pointer
+					&:hover
+						opacity: 0.8
+		.clients2
+			.arrows
+				top: 27px !important
 .more
 	background-color: #340738
 	padding: 100px 0
 	text-align: center
 	h2
-		font-size: 70px
+		font-size: calc(2vw + 2vh + 2vmin)
 		color: $yellow
 		text-transform: uppercase
 		margin: 0
 	h3
 		font-weight: normal
-		font-size: 56px
+		font-size: calc(1vw + 1vh + 2vmin)
 		margin: 0
 		color: #fff
 	dl
@@ -727,6 +743,10 @@ header
 		justify-content: center
 		gap: 3rem
 		margin-top: 50px
+		@media(max-width:900px)
+			padding: 0 20px
+		@media(max-width:530px)	
+			flex-direction: column
 		.column
 			max-width: 370px
 		dt
@@ -734,15 +754,30 @@ header
 			font-size: 32px
 			font-weight: 600
 			margin-bottom: 20px
+			margin: 0
+			margin-bottom: 1rem
+			@media(max-width:840px)
+				font-size: 20px
 		dd
 			color: #fff
 			font-size: 24px
+			margin: 0
+			@media(max-width:840px)
+				font-size: 1rem
 .callback
 	background-color: $purple
 	display: flex
 	justify-content: center
 	gap: 30px
-	padding: 100px 0
+	padding: 100px 20px
+	@media(max-width:700px)
+		flex-direction: column
+		p.like
+			display: none
+			&+span
+				display: none
+		form
+			margin-left: 0 !important
 	.cta
 		width: 50%
 		color: #fff
@@ -751,10 +786,15 @@ header
 			font-weight: 600
 			text-transform: uppercase
 			&.h3
-				font-size: 50px
+				font-size: calc(1vh + 1vw + 2vmin)
+				@media(max-width:500px)
+					font-size: calc(1vh + 2vw + 2vmin)
 			&.h2
-				font-size: 100px
 				color: $yellow
+				font-size: calc(2vh + 3vw + 3vmin)
+				@media(max-width:1280px)
+					font-size: calc(1vh + 4vw + 2vmin)
+					margin: 1rem 0
 		p.like
 			font-size: 36px
 			margin: 0
@@ -767,6 +807,9 @@ header
 			text-transform: inherit
 	form
 		width: 630px
+		@media(max-width:1280px)
+			width: 100%
+			margin-left: 3rem
 		h3
 			color: #fff
 			font-size: 36px
@@ -813,6 +856,8 @@ header
 					border-radius: 7px
 					width: 24px
 					height: 24px
+					min-width: 24px
+					min-height: 24px
 					display: inline-block
 					margin-right: 10px
 					position: relative
@@ -846,6 +891,11 @@ footer
 		justify-content: space-between
 		color: #fff
 		font-size: 14px
+		@media(max-width:1440px)
+			width: 100%
+			padding: 0 20px
+		@media(max-width:840px)	
+			flex-direction: column
 		.y
 			font-weight: 600
 			font-size: 18px
@@ -893,7 +943,7 @@ footer
 						content: '►'
 						position: absolute
 						top: 5px
-						right: 29px
+						left: 128px
 						font-size: 8px
 						display: block
 						transform: rotate(90deg)

@@ -40,12 +40,19 @@ export const swiper = {
 
     });
 	},
-	init_clients1(el){
+	init_clients(el,idx){
 		let pv = 5
+		innerWidth <= 1110 && (pv = 4) 
+		innerWidth <= 850 && (pv = 3) 
 		innerWidth <= 630 && (pv = 2) 
+		innerWidth <= 520 && (pv = 1) 
 		new Swiper(el, {
 			slidesPerView: pv,
       spaceBetween: 30,
+			navigation: {
+        nextEl: `.clients_next${idx}`,
+        prevEl: `.clients_prev${idx}`,
+      }
 			
 
     });
