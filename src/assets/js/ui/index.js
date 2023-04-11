@@ -9,10 +9,12 @@ export async function Ui(){
 		swiper.init(qs('.header-swiper .swiper')),
 		swiper.init_test(qs('.swiper.test-swiper')),
 		swiper.init_clients(qs('.swiper.clients-swiper1'),1),
-		swiper.init_clients(qs('.swiper.clients-swiper2'),2)
+		swiper.init_clients(qs('.swiper.clients-swiper2'),2),
+		swiper.init_process(qs('.swiper.process-swiper'))
 	)
-	process.env.NODE_ENV == 'production'
-	&& await yt.load() && ( yt.init(), yt.observe() )	
+	//process.env.NODE_ENV == 'production'
+	//&&
+	await yt.load() && ( yt.init(), yt.observe() )	
 
 
 	hidden_contacts_footer()

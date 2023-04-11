@@ -19,7 +19,11 @@
 
 			.swiper-slide
 				.dsc
-					span.h1 Заголовок 2
+					span.h1 разработка
+					span.yellow сочных, неповторимых
+					span.h1 логотипов
+					h2 От стартапов до крупного бизнеса
+					h2 Мы знаем как сделать чтобы вас заметили
 					button.yellow Разработать логотип
 				.img
 					picture
@@ -99,8 +103,28 @@
 					.txt
 						p В 1ой итерации кол-во правок неограниченно, но они не должны противоречить предыдущим правкам и согласованным решениям на предыдущих этапах согласования (референсы, эскиз).		
 					.video
-						img.ph(src="/assets/img/icons/video.svg")
-						img.play(src="/assets/img/icons/play.png")
+
+						iframe(
+							width="100%"
+							src="https://www.youtube.com/embed/Y8Wp3dafaMQ&autoplay=1"
+							srcdoc=`
+							<style>
+								*{padding:0;margin:0;overflow:hidden}
+								html,body{height:100%}
+								a{display: flex;height: 100%;align-items: center; justify-content: center}
+								img.main{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+								img.play{position: relative; width: 100px; height: 100px;}
+							</style>
+							
+							<a href=https://www.youtube.com/embed/Y8Wp3dafaMQ?autoplay=1>
+								<img class="main" src=https://img.youtube.com/vi/Y8Wp3dafaMQ/hqdefault.jpg>
+								<img class="play" src="/assets/img/icons/play.png"/>
+							</a>`
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+							loading="lazy"
+							title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition")
 				.swiper-slide
 					.header
 						img.userpic(src="/assets/img/icons/userpic.svg")
@@ -202,20 +226,52 @@
 	.wrapper
 		.dsc
 			h2 Процесс создания логотипа
-			dl
-				dt 1 шаг - заявка на логотип
-				dd
-					p.yellow Вы оставляете заявку на разработку
-					p Позвоните нам или оставьте заявку на сайте, чтобы начать приятное сотрудничество.
+			.swiper.process-swiper
+				.swiper-wrapper
+					.swiper-slide
+						dl
+							dt 1. заявка на логотип
+							dd
+								p.yellow Вы оставляете заявку на разработку
+								p Позвоните нам или оставьте заявку на сайте, чтобы начать приятное сотрудничество.
+					.swiper-slide
+						dl
+							dt 2. выяснение потребностей
+							dd
+								p.yellow Мы узнаем Ваши вкусы
+								p Наши опытные дизайнеры не только хорошо рисуют, но и отлично умеют понимать что нравится заказчику. Поэтому готовая работа - это именно то, что вы просили.
+					.swiper-slide
+						dl
+							dt 3. разработка вариантов
+							dd
+								p.yellow Разрабатываем 2-3 черновых варианта
+								p Чтобы точно определиться какой логотип нужен мы занимаемся разработкой сразу нескольких вариантов в совершенно разных концепциях.
+					.swiper-slide
+						dl
+							dt 4. работа над вариантом
+							dd
+								p.yellow Делаем ваш логотип неповторимым
+								p Из выбранной концепции мы создаем именно то, что подойдет вашей компании и, конечно, понравится Вам.
+					.swiper-slide
+						dl
+							dt 5. готовый логотип
+							dd
+								p.yellow Передаем логотип Вам
+								p После всех согласований мы передаем готовый логотип в векторном формате, что позволит использовать его где угодно.
+								
+
+								
+
 		#player
 .certified
 	.wrapper
 		h2 мы являемся <span>сертифицированными партнерами</span>
 		.logos
-			img(src="/assets/img/icons/google_p.jpg")
+			a(href="https://www.google.com/partners/agency?id=2851488653" target="_blank")
+				img(src="/assets/img/icons/google_p.jpg")
 			img(src="/assets/img/icons/hoster_p.jpg")
 	.wave
-		img(src="/assets/img/icons/wave.svg")
+		img(src="/assets/img/icons/purple_wave.svg" width="100%")
 .clients
 	.wrapper
 		h2 Наши клиенты
@@ -265,26 +321,27 @@
 			dt Разработка сайтов 
 			dd Делаем работы по созданию web-дизайна, верстке, продвижению
 .callback
-	.cta
-		span.h3 Закажите
-		span.h2 уникальный
-		span.h3 логотип в москве
-		p.like Понравился <span>наш подход в работе?</span>
-		span.calc Мы рассчитаем и предложим Вам варианты работ.
-	form
-		h3 Будем рады помочь
-		label
-			span Ваше имя
-			input(type="text" name="name" required)
-		label
-			span Телефон
-			input(type="text" name="phone" required)
-		label
-			span Комментарий
-			textarea
-		.agree
+	.wrapper
+		.cta
+			span.h3 Закажите
+			span.h2 уникальный
+			span.h3 логотип в москве
+			p.like Понравился <span>наш подход в работе?</span>
+			span.calc Мы рассчитаем и предложим Вам варианты работ.
+		form
+			h3 Будем рады помочь
 			label
-				input(type="checkbox" checked)
-				.checkmark
-				span Нажимая кнопку отправить заявку, даю согласие на обработку <a href="#">персональных данных*</a>
-			input(type="submit" value="Отправить заявку")
+				span Ваше имя
+				input(type="text" name="name" required)
+			label
+				span Телефон
+				input(type="text" name="phone" required)
+			label
+				span Комментарий
+				textarea
+			.agree
+				label
+					input(type="checkbox" checked)
+					.checkmark
+					span Нажимая кнопку отправить заявку, даю согласие на обработку <a href="#">персональных данных*</a>
+				input(type="submit" value="Отправить заявку")

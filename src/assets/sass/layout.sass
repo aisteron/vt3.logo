@@ -85,7 +85,7 @@ header
 			.lang
 				display: flex
 				position: relative
-				margin-right: 350px
+				margin-right: 60px
 				@media(max-width: 1550px)
 					margin-right: 8vw
 				&.open
@@ -142,8 +142,9 @@ header
 				width: 100%
 				gap: 40px
 				align-items: center
+				padding: 0 20px
+				justify-content: space-around
 				@media(max-width: 1550px)
-					padding: 0 20px
 					gap: 20px
 				li.parent
 					position: relative
@@ -224,7 +225,7 @@ header
 	color: #fff
 	background-color: $dp
 	.swiper
-		width: 92vw
+		width: 1790px
 		@media(max-width: 1650px)
 			width: 100%
 			padding-left: 20px
@@ -303,7 +304,9 @@ header
 	color: #fff
 	padding: 100px 0
 	.wrapper
-		padding: 0 20px
+		@media(max-width:1700px)
+			padding: 0 20px
+
 	h2, h3
 		margin: 0
 	h2
@@ -368,9 +371,10 @@ header
 	.wrapper
 		//width: 1790px
 		margin: 0 auto
-		padding: 100px 20px
+		padding: 100px 0
 		position: relative
-		
+		@media(max-width:1790px)
+			padding: 100px 20px
 		>h2
 			//font-size: 70px
 			font-size: calc(2vw + 2vh + 2vmin)
@@ -411,6 +415,7 @@ header
 				.header
 					display: flex
 					align-items: center
+					padding: 3px
 					img.userpic
 						border-radius: 50%
 						border: 3px solid #340738
@@ -446,6 +451,14 @@ header
 						left: 33px
 				.video
 					position: relative
+					iframe
+						height: 13.6vw
+						@media(max-width:1230px)
+							height: 18.6vw
+						@media(max-width:900px)
+							height: 28vw !important
+						@media(max-width:630px)
+							height: 230px !important
 					img
 						&.ph
 							width: 100%
@@ -459,7 +472,9 @@ header
 .how_much
 	background-color: $purple
 	.wrapper
-		padding: 100px 20px
+		padding: 100px 0
+		@media(max-width:1790px)
+			padding: 100px 20px
 		.header
 			border-left: 4px solid $yellow
 			padding-left: 30px
@@ -485,12 +500,16 @@ header
 				gap: 20px
 				.block
 					width: auto
-			@media(max-width: 680px)			
+			@media(max-width: 680px)
 				flex-direction: column
+			@media(max-width:500px)	
+				.block
+					width: 100%
 			.block
 				width: 577px
 				background-color: #fff
 				border: 3px solid $yellow
+
 				p.type
 					text-align: center
 					font-weight: bold
@@ -536,6 +555,9 @@ header
 		flex-direction: column
 		.header
 			text-align: center
+	@media(max-width:500px)
+		.header
+			text-align: left !important
 	.header
 		max-width: 480px
 		h2
@@ -573,10 +595,13 @@ header
 			color: $yellow
 			text-transform: uppercase
 			text-align: center
+			@media(max-width:500px)
+				text-align: left
 		section
 			display: flex
 			gap: 30px
 			margin-top: 50px
+			justify-content: center
 			@media(max-width: 1230px)
 				flex-wrap: wrap
 				//justify-content: space-between
@@ -595,6 +620,10 @@ header
 					margin: 0
 					position: relative
 					text-align: right
+					@media(max-width:500px)
+						width: 100%
+						img
+							width: 100%
 					img
 						margin-bottom: -5px
 					figcaption
@@ -642,10 +671,13 @@ header
 			margin-left: 2rem
 		.dsc
 			width: 743px
+			margin-left: 20px
 			@media(max-width: 1600px)
-				width: auto
+				width: 50%
 				padding-top: 100px 
-				margin-left: 20px
+			@media(max-width:770px)	
+				width: 100% !important
+				padding: 100px 20px
 			dd
 				margin: 0
 				padding: 0
@@ -657,17 +689,18 @@ header
 						font-size: 32px
 						color: $yellow
 			dt
-				font-weight: bold
+				font-weight: 600
 				font-size: 32px
 				color: #fff
-				font-weight: normal
+				text-transform: uppercase
+
 .certified
 	background-color: #56295A
 	.wrapper
 		text-align: center
 		padding-top: 100px
 	h2
-		font-size: calc(1vw + 2vh + 2vmin)
+		font-size: calc(2vw + 2vh + 2vmin)
 		text-transform: uppercase
 		margin: 0
 		color: #fff
@@ -690,6 +723,7 @@ header
 			border-radius: 7px
 	.wave
 		background-color: #fff
+		
 .clients
 	.wrapper
 		text-align: center
@@ -699,9 +733,9 @@ header
 			font-size: calc(2vw + 2vh + 2vmin)
 			color: $yellow
 			text-transform: uppercase
-			margin-top: 3rem
-			@media(max-width: 450px)
-				margin-top: 5rem
+			margin-top: 7rem
+			@media(max-width: 580px)
+				font-size: calc(1vw + 1vh + 2vmin)
 		.swiper-wrapper
 			align-items: center	
 
@@ -724,6 +758,8 @@ header
 		.clients2
 			.arrows
 				top: 27px !important
+			@media(max-width:500px)	
+				display: none
 .more
 	background-color: #340738
 	padding: 100px 0
@@ -733,11 +769,18 @@ header
 		color: $yellow
 		text-transform: uppercase
 		margin: 0
+		@media(max-width:500px)
+			text-align: left
+			margin-left: 20px
+			margin-bottom: 1rem
 	h3
 		font-weight: normal
 		font-size: calc(1vw + 1vh + 2vmin)
 		margin: 0
 		color: #fff
+		@media(max-width:500px)
+			text-align: left
+			margin-left: 20px
 	dl
 		display: flex
 		justify-content: center
@@ -749,6 +792,13 @@ header
 			flex-direction: column
 		.column
 			max-width: 370px
+			@media(max-width:530px)
+				display: flex
+				justify-content: space-between
+				text-align: left
+				dt
+					min-width: 130px
+					margin-right: 1rem		
 		dt
 			color: $yellow
 			font-size: 32px
@@ -766,123 +816,132 @@ header
 				font-size: 1rem
 .callback
 	background-color: $purple
-	display: flex
-	justify-content: center
-	gap: 30px
-	padding: 100px 20px
-	@media(max-width:700px)
-		flex-direction: column
-		p.like
-			display: none
-			&+span
-				display: none
-		form
-			margin-left: 0 !important
-	.cta
-		width: 50%
-		color: #fff
-		span
-			display: block
-			font-weight: 600
-			text-transform: uppercase
-			&.h3
-				font-size: calc(1vh + 1vw + 2vmin)
-				@media(max-width:500px)
-					font-size: calc(1vh + 2vw + 2vmin)
-			&.h2
-				color: $yellow
-				font-size: calc(2vh + 3vw + 3vmin)
-				@media(max-width:1280px)
-					font-size: calc(1vh + 4vw + 2vmin)
-					margin: 1rem 0
-		p.like
-			font-size: 36px
-			margin: 0
-			margin-top: 2rem
-			span
-				color: $yellow
-				display: inline
-		span.calc
-			font-size: 24px
-			text-transform: inherit
-	form
-		width: 630px
-		@media(max-width:1280px)
+	.wrapper
+		width: 1370px
+		display: flex
+		justify-content: space-between
+		gap: 30px
+		padding: 100px 0
+		@media(max-width:1380px)
 			width: 100%
-			margin-left: 3rem
-		h3
-			color: #fff
-			font-size: 36px
-			margin-top: 0
-		>label
-			display: block
-			&:nth-of-type(2)
-				margin: 2rem 0
-			span
-				display: block
-				color: #fff
-				font-size: 14px
-				margin-bottom: 10px
-			input
-				width: 100%
-				height: 38px
-				border-radius: 50px
-				border: none
-				outline: none
-				padding-left: 1rem
-				font-size: 1rem
-			textarea
-				width: 100%
-				height: 84px
-				border-radius: 20px
-		.agree
-			margin-top: 1rem
-			span
-				display: inline
-			label
-				display: flex
-				align-items: center
-				margin-bottom: 1rem
-				input[type="checkbox"]
+		@media(max-width:1790px)
+			padding: 100px 20px
+		@media(max-width:700px)
+			flex-direction: column
+			p.like
+				display: none
+				&+span
 					display: none
-					&:checked ~ .checkmark
-						&:after
-							content: url(/assets/img/icons/ok.svg)
-							position: absolute
-							top: 1px
-							left: 2px
-				.checkmark
-					border: 1px solid #fff
-					border-radius: 7px
-					width: 24px
-					height: 24px
-					min-width: 24px
-					min-height: 24px
-					display: inline-block
-					margin-right: 10px
-					position: relative
-					cursor: pointer
-					&:hover
-						background-color: #2f2154
-					&+span
-						color: #fff
-						a
-							color: #fff
-							text-decoration: underline
-							&:hover
-								text-decoration: none
-			input[type="submit"]
+			form
+				margin-left: 0 !important
+		.cta
+			width: 50%
+			color: #fff
+			@media(max-width:700px)
+				width: 100%
+			span
 				display: block
-				border-radius: 30px
-				background: linear-gradient(180deg, #F1CA2D 0%, #F7A21E 100%)
-				color: #000
-				padding: 20px 60px
-				font-size: 18px
-				cursor: pointer
-				outline: none
-				border: none
-				&:hover
-					background: linear-gradient(180deg,#f1ca2d,#be7a11)
+				font-weight: 600
+				text-transform: uppercase
+				&.h3
+					font-size: calc(1vh + 1vw + 2vmin)
+					@media(max-width:500px)
+						font-size: calc(1vh + 2vw + 2vmin)
+				&.h2
+					color: $yellow
+					font-size: calc(2vh + 3vw + 3vmin)
+					@media(max-width:1280px)
+						font-size: calc(1vh + 4vw + 2vmin)
+						margin: 1rem 0
+			p.like
+				font-size: 36px
+				margin: 0
+				margin-top: 2rem
+				span
+					color: $yellow
+					display: inline
+			span.calc
+				font-size: 24px
+				text-transform: inherit
+		form
+			width: 630px
+			@media(max-width:1280px)
+				width: 100%
+				margin-left: 3rem
+			h3
+				color: #fff
+				font-size: 36px
+				margin-top: 0
+			>label
+				display: block
+				&:nth-of-type(2)
+					margin: 2rem 0
+				span
+					display: block
+					color: #fff
+					font-size: 14px
+					margin-bottom: 10px
+				input
+					width: 100%
+					height: 38px
+					border-radius: 50px
+					border: none
+					outline: none
+					padding-left: 1rem
+					font-size: 1rem
+				textarea
+					width: 100%
+					height: 84px
+					border-radius: 20px
+			.agree
+				margin-top: 1rem
+				span
+					display: inline
+				label
+					display: flex
+					align-items: center
+					margin-bottom: 1rem
+					input[type="checkbox"]
+						display: none
+						&:checked ~ .checkmark
+							&:after
+								content: url(/assets/img/icons/ok.svg)
+								position: absolute
+								top: 1px
+								left: 2px
+					.checkmark
+						border: 1px solid #fff
+						border-radius: 7px
+						width: 24px
+						height: 24px
+						min-width: 24px
+						min-height: 24px
+						display: inline-block
+						margin-right: 10px
+						position: relative
+						cursor: pointer
+						&:hover
+							background-color: #2f2154
+						&+span
+							color: #fff
+							a
+								color: #fff
+								text-decoration: underline
+								&:hover
+									text-decoration: none
+				input[type="submit"]
+					display: block
+					border-radius: 30px
+					background: linear-gradient(180deg, #F1CA2D 0%, #F7A21E 100%)
+					color: #000
+					padding: 20px 60px
+					font-size: 18px
+					cursor: pointer
+					outline: none
+					border: none
+					&:hover
+						background: linear-gradient(180deg,#f1ca2d,#be7a11)
+
 footer
 	background-color: #56295A
 	.wrapper

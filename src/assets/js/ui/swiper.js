@@ -18,7 +18,7 @@ export const swiper = {
 	init(root_el){
 		
 		new Swiper(root_el, {
-			autoplay:process.env.NODE_ENV == 'production' && {delay: 2000},
+			autoplay:process.env.NODE_ENV == 'production' && {delay: 3000},
 			speed: 1000,
       spaceBetween: 30,
       effect: "fade",
@@ -56,5 +56,14 @@ export const swiper = {
 			
 
     });
-	}
+	},
+
+	init_process(root_el){
+		
+		new Swiper(root_el, {
+			autoplay:process.env.NODE_ENV == 'production' && {delay: 2000},
+			speed: 1000,
+      spaceBetween: 30,
+    });
+	},
 }
